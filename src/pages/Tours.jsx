@@ -1,4 +1,5 @@
 import React, { useMemo, useState, useEffect } from "react";
+import { useSearchParams } from "react-router-dom";
 import ToursCard from "../components/ToursCard";
 import { tours } from "../data/tours";
 import "./Tours.css";
@@ -18,6 +19,32 @@ export default function Tours() {
   const [category, setCategory] = useState("Svi");
   const [duration, setDuration] = useState("Svi");
   const [sort, setSort] = useState("price-asc");
+
+  const [searchParams, setSearchParams] = useSearchParams();
+
+  useEffect(() => {
+    //Dohvat query string parametara preko useSearchParams hooka
+    const urlCat = decodeURIComponent(searchParams.get("category"));
+    const urlQuery = decodeURIComponent(searchParams.get("query"));
+    const urlDuration = decodeURIComponent(searchParams.get("duration"));
+    const urlSort = decodeURIComponent(searchParams.get("sort"));
+
+    if(urlCat && urlCat != "null") setCategory(urlCat);
+    if(urlQuery && urlQuery != "null") setQuery(urlQuery); //da ne vraća null, stavljamo ovaj && i provjeravamo
+    if(urlDuration && urlDuration != "null") setDuration(urlDuration);
+    if(urlSort && urlSort != "null") setSort(urlSort);
+  }, [])
+
+   useEffect(() => {
+    let params = {};
+    if(category) params.category = category;
+    if(query) params.query = query;
+    if(duration) params.duration = duration;
+    if(sort) params.sort = sort;
+    //Postavljanje query parametara preko useSearchParams hooka
+    setSearchParams(params, {replace: true});
+  
+  }, [query, category, duration, sort])
 
   //Filtriranje i sortiranje
   const filtered = useMemo(() => {

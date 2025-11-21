@@ -4,6 +4,9 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import Tours from "./pages/tours";
+import Categories from "./pages/Categories";
+import ToursDetails from "./pages/ToursDetails";
+import About from "./pages/About";
 
 export default function App(){
   return (
@@ -13,6 +16,9 @@ export default function App(){
          <Routes>
           <Route path="/" element={<Home/>}/>
           <Route path="/tours" element={<Tours/>}/>
+          <Route path="/tours/:id" element={<ToursDetails/>}/>
+          <Route path="/categories" element={<Categories/>}/>
+          <Route path="/about" element={<About/>}/>
         </Routes>
       </main>
       <Footer />
