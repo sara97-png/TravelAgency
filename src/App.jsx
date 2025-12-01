@@ -7,6 +7,9 @@ import Tours from "./pages/tours";
 import Categories from "./pages/Categories";
 import ToursDetails from "./pages/ToursDetails";
 import About from "./pages/About";
+import FAQ from "./pages/FAQ";
+import Contact from "./pages/Contact";
+import NotFound from "./pages/NotFound";
 
 export default function App(){
   return (
@@ -19,6 +22,9 @@ export default function App(){
           <Route path="/tours/:id" element={<ToursDetails/>}/>
           <Route path="/categories" element={<Categories/>}/>
           <Route path="/about" element={<About/>}/>
+          <Route path="/faq" element={<FAQ/>}/>
+          <Route path="/contact" element={<Contact />} />
+          <Route path="*" element={<NotFound/>}/>
         </Routes>
       </main>
       <Footer />
