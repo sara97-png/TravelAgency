@@ -1,5 +1,7 @@
 import React from "react";
 import Accordion from "../components/Accordion";
+import Banner from "../components/Banner";
+import image2 from "../assets/image2.jpg";
 
 const faqs = [
     { question: "Kako rezervirati izlet?", answer: "Izlet možete rezervirati preko kontakt forme ili pozivom."},
@@ -11,6 +13,8 @@ const faqs = [
 
 export default function FAQ() {
     return (
+        <>
+        <Banner image={image2} title={"F.A.Q."} />
         <section className="faq container">
             <h1>Često postavljena pitanja</h1>
             <div style={{marginTop: 12}}>
@@ -19,5 +23,6 @@ export default function FAQ() {
                 ))}
             </div>
         </section>
-    )
+        </>
+    );
 }

@@ -3,6 +3,9 @@ import { Link } from "react-router-dom";
 import { tours } from "../data/tours";
 
 import "../components/ToursCard.css";
+import Banner from "../components/Banner";
+import image4 from "../assets/image4.jpg";
+
 
 export default function Categories() {
 
@@ -16,6 +19,8 @@ const categoryImages = {
 
     const categories = [...new Set(tours.map((c) => c.category))];
     return (
+        <>
+         <Banner image={image4} title={"Kategorije"} />
          <section className="categories container">
             <h1>Kategorije</h1>
             <div className="grid">
@@ -31,5 +36,6 @@ const categoryImages = {
                 ))}
             </div>
         </section>
+        </>
     )
 }

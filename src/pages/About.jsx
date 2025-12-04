@@ -1,7 +1,11 @@
 import React from "react";
+import Banner from "../components/Banner";
+import image2 from "../assets/image2.jpg";
 
 export default function About() {
 return (
+    <>
+    <Banner image={image2} title={"O nama"} />
     <section className="about container">
         <h1>O nama</h1>
         <p>
@@ -17,5 +21,6 @@ return (
             <li>Manje grupe i autentična iskustva</li>
         </ul>
     </section>
+    </>
     );
 }

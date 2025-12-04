@@ -2,18 +2,22 @@ import React from "react";
 import {Link} from 'react-router-dom';
 import ToursCard from "../components/ToursCard";
 import {tours} from "../data/tours";
+import Banner from "../components/Banner";
+import image1 from "../assets/image1.jpg";
 
 export default function Home() {
     const featured = [...tours].slice(0, 3) 
 
     return (
+        <>
+        <Banner image={image1} title={"Naslovnica"} />
         <section className="home">
             <div className="hero container">
-                <h1>Dobrodošli u Travel Agency</h1>
+                <h1>Dobrodošli u Travel Agency!</h1>
                 <p>Najbolja ponuda izleta i avantura!</p>
             </div>
             <div className="container" style={{display: "flex", gap: 10, marginTop: 12}}>
-            <Link to="/courses" className="btn">Pogledaj izlete</Link>
+            <Link to="/tours" className="btn">Pogledaj izlete</Link>
             <Link to="/contact" className="btn" style={{background: "#087f5b"}}>Kontaktirajte nas</Link>
         </div>
         <div className="container">
@@ -25,5 +29,6 @@ export default function Home() {
         </div> 
         </div>
         </section>
+        </>
     );
 }

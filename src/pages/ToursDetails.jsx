@@ -1,6 +1,8 @@
 import React from "react";
 import { useParams, Link } from "react-router-dom";
 import { tours } from "../data/tours";
+import Banner from "../components/Banner";
+import image7 from "../assets/image7.jpg";
 
 export default function ToursDetails() {
     const {id} = useParams();
@@ -16,6 +18,8 @@ export default function ToursDetails() {
  {/*Informacije o izletima, u koje će se preusmjerit*/}
 
     return(
+        <>
+        <Banner image={image7} title="Detalji izleta" />
     <section className="tours-details container">
         <Link to="/tours" className="btn" style={{marginTop: 30}}>
         {"↩️ Back"}
@@ -62,5 +66,6 @@ export default function ToursDetails() {
             </button>
         </div>
     </section>
+    </>
     );
 }

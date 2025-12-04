@@ -3,6 +3,8 @@ import { useSearchParams } from "react-router-dom";
 import ToursCard from "../components/ToursCard";
 import { tours } from "../data/tours";
 import "./Tours.css";
+import Banner from "../components/Banner";
+import image5 from "../assets/image5.jpg";
 
 const sorts = [
   { value: "price-asc", label: "Cijena ⬆️" },
@@ -62,6 +64,8 @@ export default function Tours() {
   }, [query, category, duration, sort]);
 
   return (
+    <>
+     <Banner image={image5} title={"Izleti"} />
     <section className="tours container">
       <h1>Izleti</h1>
       <div className="filters">
@@ -114,5 +118,6 @@ export default function Tours() {
       <p className="muted">Nema rezultata za zadane filtere</p>
       )}
     </section>
+    </>
   );
 }

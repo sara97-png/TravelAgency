@@ -1,5 +1,5 @@
 .header {
-    position: fixed; /*fixiran header - mi miče*/
+    position: fixed; /*fixiran header - ne miče*/
     top: 0;
     left: 0;
     right: 0;
@@ -17,8 +17,13 @@
 }
 
 .logo {
-    font-weight: 800; 
+    font-weight: 700; 
+    font-size: 1.5vw;
     letter-spacing: 0.5px;
+    text-transform: uppercase;
+    text-shadow: 4px 4px 0px darkgreen;
+    color: #D9EAF3;
+
 }
 
 .nav {
@@ -54,7 +59,7 @@
     .nav {
         display: none; /*sakrivamo nav za mobilne uređaje*/
         position: absolute;
-        right: 4%; /*da nije slipljeno uz krajnji rub*/
+        right: 2.5%; /*da nije slipljeno uz krajnji rub*/
         top: 56px; /*da se pojavi ispod trake*/
         background-color: var(--primary);
         flex-direction: column; /*da navigacija bude u stupu*/
@@ -64,6 +69,8 @@
         }
 
         .nav.open {
-            display: flex;       
+            display: flex;    
+                        
     }
+
 }

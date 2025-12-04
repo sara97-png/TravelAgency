@@ -1,8 +1,12 @@
 import React from "react";
 import ContactForm from "../components/ContactForm";
+import Banner from "../components/Banner";
+import image3 from "../assets/image3.jpg";
 
 export default function Contact() {
     return (
+        <>
+         <Banner image={image3} title={"Kontakt"} />
         <section className="contact container">
             <h1>Kontakt</h1>
             <p className="muted">Ispunite formu i javit ćemo Vam se uskoro.</p>
@@ -13,5 +17,6 @@ export default function Contact() {
             <p>Adresa: Ulica Primjera 1, Zagreb</p>
             <p>Radno vrijeme: Pon–Pet 9–17h</p>
         </section>
+        </>
     )
 }
