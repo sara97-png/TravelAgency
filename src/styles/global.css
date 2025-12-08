@@ -1,10 +1,10 @@
 :root {
   --bg: #f8fafc;
-  --text: #0f172a;
+  --text: #2b395a;
   --muted: #475569;
-  --primary: #0b7285;
-  --primary-900: #084c5a;
-  --accent: #087f5b;
+  --primary: #1E6FA8;
+  --primary-900: #123E63;
+  --accent: #689dbd;
   --card: #ffffff;
   --border: #e5e7eb;
   --shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
@@ -28,7 +28,7 @@ a {
 }
 .container {
   max-width: 1100px;
-  width: 100%;
+  width: 100%; 
   margin-inline: auto;
 }
 

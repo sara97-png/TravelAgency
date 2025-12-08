@@ -18,7 +18,7 @@ export default function Home() {
             </div>
             <div className="container" style={{display: "flex", gap: 10, marginTop: 12}}>
             <Link to="/tours" className="btn">Pogledaj izlete</Link>
-            <Link to="/contact" className="btn" style={{background: "#087f5b"}}>Kontaktirajte nas</Link>
+            <Link to="/contact" className="btn" style={{background: "#1e784bff"}}>Kontaktirajte nas</Link>
         </div>
         <div className="container">
         <h2>Izdvojeni izleti</h2>

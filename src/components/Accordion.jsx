@@ -1,16 +1,23 @@
-import React, {useState} from "react";
+import React from "react";
 import "./Accordion.css";
 
-export default function Accordion({question, answer}){
-    const [open, setOpen] = useState(false);
+export default function Accordion({index,  question, answer, openIndex, setOpenIndex}){
+      
+    const isOpen = openIndex === index;
+
+     const toggle = () => {
+        setOpenIndex(isOpen ? null : index); 
+        // ako je već otvoren → zatvori
+        // ako nije → otvori ovaj i zatvori ostale
+    };
 
     return (
         <div className="accordion-item">
-            <button type="button" className="accordion-title" onClick={() => setOpen(!open)}>
+            <button type="button" className="accordion-title" onClick={toggle}>
               <span>{question}</span>
-              <span>{open ? " ➖" : " ➕"}</span>
+              <span>{isOpen ? " ➖" : " ➕"}</span>
             </button>
-            {open && <div className="accordion-content">{answer}</div>} {/*Ako je open izrenderirat ćemo div s accordionom i odgovorom*/}
+            {isOpen && ( <div className="accordion-content">{answer}</div>)}
         </div>
-    )
+    );
 }

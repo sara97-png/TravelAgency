@@ -9,7 +9,11 @@ export default function Header() {
   return (
     <header className="header">
       <div className="container header-inner">
-        <div className="logo">Travel Agency</div>
+        <div className="logo">
+          <span className="plane">✈</span>
+          TRAVEL AGENCY
+        </div>
+
         <button
           type="button"
           className="menu-btn"
@@ -20,49 +24,43 @@ export default function Header() {
         <nav className={`nav ${open ? "open" : ""}`}>
           <NavLink
             to="/"
-            className={({ isActive }) => {
-              isActive ? "active" : "";
-            }}
+            end
+            className={({ isActive }) => (isActive ? "active" : "")}
           >
             Naslovnica
           </NavLink>
+
           <NavLink
             to="/about"
-            className={({ isActive }) => {
-              isActive ? "active" : "";
-            }}
+            className={({ isActive }) => (isActive ? "active" : "")}
           >
             O nama
           </NavLink>
+
           <NavLink
             to="/contact"
-            className={({ isActive }) => {
-              isActive ? "active" : "";
-            }}
+            className={({ isActive }) => (isActive ? "active" : "")}
           >
             Kontakt
           </NavLink>
+
           <NavLink
             to="/categories"
-            className={({ isActive }) => {
-              isActive ? "active" : "";
-            }}
+            className={({ isActive }) => (isActive ? "active" : "")}
           >
             Kategorije
           </NavLink>
+
           <NavLink
             to="/tours"
-            className={({ isActive }) => {
-              isActive ? "active" : "";
-            }}
+            className={({ isActive }) => (isActive ? "active" : "")}
           >
             Izleti
           </NavLink>
+
           <NavLink
             to="/faq"
-            className={({ isActive }) => {
-              isActive ? "active" : "";
-            }}
+            className={({ isActive }) => (isActive ? "active" : "")}
           >
             F.A.Q.
           </NavLink>
